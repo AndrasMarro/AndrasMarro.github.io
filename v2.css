@@ -1,31 +1,58 @@
-.body{
+body{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: black;
+    background-color: #225570;
     color: lightgray;
+    text-align: center;
 }
-
-.card1, .card2, .card3, .card4{
-    width:180px;
-    height:180px;
-    background-color: #2D8CFF;
-    border:2px solid #9137F8;
-}
-
-
-.deck{
-    display: grid;
-    grid-template-columns: 200px 200px 200px 200px;
-    grid-gap: 20px;
-    color: #4343F7;
+.memory{
     justify-content: center;
+    display: grid;
+    grid-template-columns: 160px 160px 160px 160px;
+    grid-template-rows: 160px 160px 160px 160px;
 }
+/* .card:hover, .found:not(:active) {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+                0 2px 4px rgba(0,0,0,0.07), 
+                0 4px 8px rgba(0,0,0,0.07), 
+                0 8px 16px rgba(0,0,0,0.07),
+                0 16px 32px rgba(0,0,0,0.07), 
+                0 32px 64px rgba(0,0,0,0.07);
+} */
 
-.card{
-    width:180px;
-    height:180px;
-    background-color: #2D8CFF;
-    border:2px solid #9137F8;
+
+.flip-card{
+    display: grid;
+    place-items: center;
     
-    border-radius: 5px;
-    padding: 20px;
+    width: 150px;
+    height: 150px;
+    background-color: #007DC2;
+    border-radius: 10px;
+    
+    perspective: 1000px;
+}
+/* .flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: 0.8s;
+    transform-style: preserve-3d;
+} */
+.flip-card-front, .flip-card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.flip-card-back{
+    background-color: #009CF0;
+    transform: rotateY(180deg);
+}
+.flipped{
+    transform: rotateY(180deg); 
+}
+.found{
+    background-color: #49B7F2;
+    /* transform: rotateY(180deg); */
 }
