@@ -1,0 +1,39 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: #225570;
+    color: lightgray;
+    text-align: center;
+}
+.deck{
+    justify-content: center;
+    display: grid;
+    grid-template-columns: 160px 160px 160px 160px;
+    grid-template-rows: 160px 160px 160px 160px;
+}
+.card:hover, .found:not(:active) {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.07), 
+                0 2px 4px rgba(0,0,0,0.07), 
+                0 4px 8px rgba(0,0,0,0.07), 
+                0 8px 16px rgba(0,0,0,0.07),
+                0 16px 32px rgba(0,0,0,0.07), 
+                0 32px 64px rgba(0,0,0,0.07);
+}
+
+
+.card{
+    display: grid;
+    place-items: center;
+    
+    width: 150px;
+    height: 150px;
+    background-color: #007DC2;
+    border-radius: 10px;
+}
+.flipped{
+    background-color: #009CF0;
+    /* transform: rotateY(180deg); */
+}
+.found{
+    background-color: #49B7F2;
+    /* transform: rotateY(180deg); */
+}
